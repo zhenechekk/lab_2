@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Классическая шарлотка с яблоками</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+</head>
+<body>
+&nbsp;<div class="text">
+    <main>
+      <h1>Классическая шарлотка с яблоками</h1>
+        <!--Первый абзац с меняющимся цветом -->
+        <p onmouseover="this.style.color='red'; this.style.fontFamily='Arial'" onmouseout="this.style.color='black' ; this.style.fontFamily='Timew New Roman'; this.style.fontSize='13pt'">Классическая шарлотка с яблоками — пирог очень простой в приготовлении, но при этом вкусный, потому невероятно популярный. Печь его лучше осенью, так как именно местные сезонные фрукты зимних сортов идеально подходят для начинки.</p>
+
+        <!--Второй абзац с меняющимися отступами -->
+        <p id="second" onmouseover="changeStyle()" onmouseout="restoreStyle()">Почему они? Потому что такие яблоки обладают ярким вкусом с приятной кислинкой и насыщенным ароматом, которых зачастую очень не хватает «круглогодичным» плодам из супермаркетов. В общем, упустить счастливую возможность получить максимальные вкусовые впечатления от классической шарлотки нельзя ни в коем случае. Приготовьте этот пирог по нашему рецепту и скорее зовите близких к столу!</p>
+
+        </details>&nbsp;<h2>Ингредиенты</h2>
+          <p class="news"><span class="date">Мука - </span>1 стакан</p>
+          <p class="news"><span class="date">Сахар - </span>1 стакан</p>
+          <p class="news"><span class="date">Яйца - </span>3 шт.</p>
+          <p class="news"><span class="date">Яблоки - </span>3-4 шт.</p>
+          <p class="news"><span class="date">Ванилин (ванильный сахар) - </span>по вкусу</p>
+          <p class="news"><span class="date">Сода пищевая - </span>щепотка</p>
+
+        </details>&nbsp;<h2>Пошаговый рецепт приготовления</h2>
+          <p class="news"><span class="date">Шаг 1: </span>Готовим тесто классической шарлотки. В чашу миксера вбиваем яйца. Добавляем сахар. Взбиваем миксером сначала на средней, затем на высокой скорости до получения светло-желтой массы однородной консистенции.</p>
+          <p class="news"><span class="date">Шаг 2: </span>В сладкую яичную смесь добавляем муку, предварительно просеянную через мелкое сито со щепоткой соды и ванилином (ванильным сахаром). Снова взбиваем миксером. Тесто шарлотки готово.</p>
+          <p class="news"><span class="date">Шаг 3: </span>Готовим начинку шарлотки. Яблоки моем и каждое разрезаем пополам. Удаляем сердцевины с семенами. Мякоть очищаем и нарезаем небольшими кубиками или ломтиками произвольной формы.</p>
+          <p class="news"><span class="date">Шаг 4: </span>Яблоки добавляем в тесто шарлотки и осторожно перемешиваем. Выливаем получившуюся массу в форму, смазанную любым жиром, и отправляем в духовку, нагретую до 190°C, на 30 минут.</p>
+ 
+    </main>
+  </div>
+  <!--Таблица и ячейки -->
+    <div class="down">
+    <table>
+      <tr>
+        <td class="style1" onmouseover="applyAlternativeStyle(this)" onmouseout="removeAlternativeStyle(this)">Ячейка 1</td>
+        <td class="style2" onmouseover="applyAlternativeStyle(this)" onmouseout="removeAlternativeStyle(this)">Ячейка 2</td>
+        <td class="style1" onmouseover="applyAlternativeStyle(this)" onmouseout="removeAlternativeStyle(this)">Ячейка 3</td>
+      </tr>
+      <tr>
+        <td class="style2" onmouseover="applyAlternativeStyle(this)" onmouseout="removeAlternativeStyle(this)">Ячейка 4</td>
+        <td class="style1" onmouseover="applyAlternativeStyle(this)" onmouseout="removeAlternativeStyle(this)">Ячейка 5</td>
+        <td class="style2" onmouseover="applyAlternativeStyle(this)" onmouseout="removeAlternativeStyle(this)">Ячейка 6</td>
+      </tr>
+    </table>
+  </div>
+
+  <!--Три рисунка с меняющимся положением -->
+    <img src="img/шаг1.jpg" alt="Рисунок 1" class="image" id="image1">
+    <img src="img/шаг2.jpg" alt="Рисунок 2" class="image-middle" id="image2">
+    <img src="img/шаг3.jpg" alt="Рисунок 3" class="image-top" id="image3">
+
+  
+  <!--Кнопки работы с рисунком -->
+  <button id="hideImage">Скрыть рисунок</button>
+  <button id="showImage">Показать рисунок</button>
+  <button id="swapLayers">Поменять слои</button>
+
+  <!--Кнопки работы с сайтом -->
+  <button id="window-btn">Window</button>
+  <button id="navigator-btn">Navigator</button>
+  <button id="location-btn">Location</button>
+  <button id="screen-btn">Screen</button>
+
+  <!-- Все скрипты js -->
+  <script>
+    //Настройка кнопоки "window"
+    document.getElementById("window-btn").addEventListener("click", function() {
+      var windowInfo = "Window width: " + window.innerWidth + "\n";
+      windowInfo += "Window height: " + window.innerHeight + "\n";
+      windowInfo += "Screen X: " + window.screenX + "\n";
+      windowInfo += "Screen Y: " + window.screenY + "\n";
+      alert(windowInfo);
+    });
+
+    //Настройка кнопоки "navigatior"
+    document.getElementById("navigator-btn").addEventListener("click", function() {
+      var browserInfo = "Browser type: " + navigator.appCodeName + "\n";
+      browserInfo += "Browser name: " + navigator.appName + "\n";
+      browserInfo += "Browser version: " + navigator.appVersion + "\n";
+      browserInfo += "User agent: " + navigator.userAgent + "\n";
+      alert(browserInfo);
+    });
+
+    //Настройка кнопоки "location"
+    document.getElementById("location-btn").addEventListener("click", function() {
+      var locationInfo = "Document URL: " + location.href + "\n";
+      locationInfo += "Document title: " + document.title + "\n";
+      locationInfo += "Protocol: " + location.protocol + "\n";
+      locationInfo += "Host: " + location.host + "\n";
+      locationInfo += "Pathname: " + location.pathname + "\n";
+      locationInfo += "Search: " + location.search + "\n";
+      locationInfo += "Hash: " + location.hash + "\n";
+      alert(locationInfo);
+    });
+
+    //Настройка кнопоки "screen"
+    document.getElementById("screen-btn").addEventListener("click", function() {
+      var screenInfo = "Screen width: " + screen.width + "\n";
+      screenInfo += "Screen height: " + screen.height + "\n";
+      screenInfo += "Available width: " + screen.availWidth + "\n";
+      screenInfo += "Available height: " + screen.availHeight + "\n";
+      alert(screenInfo);
+    });
+
+    //Изменение первого абзаца
+    function changeStyle() {
+      var p = document.getElementById("second");
+      p.style.paddingRight = "3cm";
+      p.style.textIndent = "2.5cm";
+    }
+
+    //Изменение второго абзаца
+    function restoreStyle() {
+      var p = document.getElementById("second");
+      p.style.paddingRight = "initial";
+      p.style.textIndent = "1.0cm";
+    }
+
+    //Окно-сообщение
+    window.onload = function() {
+     alert("Последняя модификация документа: " + document.lastModified);
+    };
+
+    //Конструкция работы с ячейками
+    function applyAlternativeStyle(cell) {
+      cell.classList.add("alternative-style");
+    }
+
+    function removeAlternativeStyle(cell) {
+      cell.classList.remove("alternative-style");
+    }
+//пустой комменит
+//пустой комменит
+//пустой комменит
+
+
+//gecnjq dfjgjkdfgkn;jsdjknfgbkljnsdf;jkgbljknsdjklnfgjklndsfjgjnlkjklnsd
+    //Конструкция работы с рисунками
+    document.addEventListener("DOMContentLoaded", function () {
+      const image1 = document.getElementById("image1");
+      const image2 = document.getElementById("image2");
+      const image3 = document.getElementById("image3");
+      const hideImageButton = document.getElementById("hideImage");
+      const showImageButton = document.getElementById("showImage");
+      const swapImagesButton = document.getElementById("swapLayers");
+
+      hideImageButton.addEventListener("click", function () {
+        image2.style.visibility = "hidden";
+      });
+
+      showImageButton.addEventListener("click", function () {
+        image2.style.visibility = "visible";
+      });
+
+      swapImagesButton.addEventListener("click", function () {
+        const zIndex1 = parseInt(image1.style.zIndex);
+        const zIndex3 = parseInt(image3.style.zIndex);
+        image1.style.zIndex = zIndex3;
+        image3.style.zIndex = zIndex1;
+      });
+    });
+  </script>
+</body>
+</html> 
+
+
+//пустой комменит
